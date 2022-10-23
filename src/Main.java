@@ -1,26 +1,23 @@
 public class Main {
 
-    public static void printIsLeapYear(int year) {
-        boolean yearIsLeap = isLeap(year);
-        printIsLeapYearResult(year, yearIsLeap);
+    public static void calculateDeliveryDays(int deliveryDistance) {
+        int deliveryDistanse = 95;
+
+        int deliveryDays = 1;
+
+        if (deliveryDistanse > 20) {
+            deliveryDays++;
+        }
+        if (deliveryDistanse > 60 && deliveryDistance <= 100) {
+            deliveryDays++;
+            System.out.println("Потребуется дней: " + deliveryDays);}
     }
 
-    private static boolean isLeap(int year) {
-        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-    }
-    private static void printIsLeapYearResult(int year, boolean yearIsLeap) {
-        if (yearIsLeap) {
-            System.out.println(year + " високосный");
-        } else {
-            System.out.println(year + "не является високосным");
+        public static void main (String[]args){
+            System.out.println("Методы. Задача 3");
+            int deliveryDistance = 50;
+            calculateDeliveryDays(deliveryDistance);
         }
     }
-
-    public static void main(String[]args) {
-        System.out.println("Методы. Задача 1");
-        int year = 2020;
-        printIsLeapYear(year);
-    }
-}
 
 
